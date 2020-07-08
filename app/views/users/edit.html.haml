@@ -1,0 +1,15 @@
+%h2
+  User info
+= render 'errors'
+= form_for @user, class: 'edit_user', id: "edit_user_#{@user.id}" do |f|
+  .field
+    = f.label :name, 'Name'
+    = f.text_field :name, class: 'name'
+  .field
+    = f.label :image, 'Image'
+    = f.attachment_field :profile_image, class: 'user_image'
+  .field
+    = f.label :introduction, 'Introduction'
+    = f.text_area :introduction, class: 'introduction'
+  .actions
+    = f.submit "Update User", data: {'disable-with': 'Update User'}

@@ -1,0 +1,9 @@
+= form_for @book, class: 'new_book', id: 'new_book' do |f|
+  %div.field.row
+    = f.label :title, 'Title'
+    = f.text_field :title, class: 'col-xs-12 book_title'
+  %div.field.row
+    = f.label :body, 'Opinion'
+    = f.text_area :body, class: 'book_opinion'
+  %div.actions.row
+    = f.submit "#{btn_name} Book", class: 'btn btn-primary col-xs-12', data: {'disable-with': 'Create Book'}
