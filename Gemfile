@@ -77,3 +77,8 @@ gem 'bootstrap-sass', '~>3.3.6'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'sass-rails', '~>5.0'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
