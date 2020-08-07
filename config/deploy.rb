@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.14.1"
 
-set :application, "bookers_level2"
+set :application, "bookers-level2"
 set :repo_url, "git@github.com:ryo-kondo/bookers-level2.git"
 
 set :deploy_to, "/home/ec2-user/bookers-level2"
