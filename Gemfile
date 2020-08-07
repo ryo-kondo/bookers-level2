@@ -44,6 +44,11 @@ group :development, :test do
   # cop
   gem 'rubocop-performance'
   gem 'rubocop-rails'
+
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rbenv'
 end
 
 group :development do
@@ -82,3 +87,5 @@ gem 'dotenv-rails'
 group :production do
   gem 'mysql2'
 end
+
+gem 'ancestry'
