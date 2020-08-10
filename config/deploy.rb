@@ -9,13 +9,14 @@ set :rbenv_ruby, '2.5.7'
 set :linked_files, %w{config/master.key .env}
 append :linked_dirs, "log", "public/system", "tmp"
 
-desc 'Restart application'
-task :restart do
-  on roles(:app), in: :sequence, wait: 5 do
+namespace :deploy do
+  task :restart_puma do
     invoke  'puma:stop'
     invoke! 'puma:start'
   end
 end
+
+after 'deploy:finishing', 'deploy:restart_puma'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
